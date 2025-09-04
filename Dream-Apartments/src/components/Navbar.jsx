@@ -5,7 +5,7 @@ const links = [
   { href: "#Header", label: "Home" },
   { href: "#Projects", label: "Projects" },
   { href: "#Testimonials", label: "Testimonials" },
-  { href: "#Footer", label: "Contact" },
+  { href: "#Contact", label: "Contact" },
 ];
 
 const Navbar = () => {

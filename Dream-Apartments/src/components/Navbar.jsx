@@ -3,6 +3,7 @@ import { assets } from "../assets/assets";
 
 const links = [
   { href: "#Header", label: "Home" },
+  { href: "#About", label: "About" },
   { href: "#Projects", label: "Projects" },
   { href: "#Testimonials", label: "Testimonials" },
   { href: "#Contact", label: "Contact" },

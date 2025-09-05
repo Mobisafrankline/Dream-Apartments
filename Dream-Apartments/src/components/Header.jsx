@@ -10,7 +10,7 @@ return (
     >
         <Navbar />
         <div className="bg-transparent rounded-lg p-6 mt-10 shadow-lg text-center max-w-xl">
-            <h1 className="text-4xl font-bold mb-4 text-white">
+            <h1 className="text-5xl font-bold mb-4 text-white">
                 Discover your dream home, apartment, or house with us
             </h1>
             <p className="text-1xl text-white">

@@ -3,76 +3,67 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="bg-gray-50 py-16 px-6 lg:px-20 font-sans">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-        {/* Left Section */}
+    <section id="contact" className="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 px-6 lg:px-20">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        
+        {/* Left Side - Info */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Get in Touch
+          <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+            Let’s Connect
           </h2>
-          <p className="text-gray-600 mb-8">
-            Have questions, feedback, or just want to say hello? Fill out the
-            form, and we’ll get back to you as soon as possible.
+          <p className="text-gray-600 mb-10 text-lg">
+            Have questions or want to work with us? Reach out through the form or
+            using the details below.
           </p>
 
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <Mail className="w-6 h-6 text-blue-600" />
-              <p className="text-gray-700">support@example.com</p>
+          <div className="space-y-5">
+            <div className="flex items-center space-x-4">
+              <MapPin className="text-indigo-600 w-6 h-6" />
+              <span className="text-gray-800 text-lg">734-1200, Murang'a, Kenya</span>
             </div>
-            <div className="flex items-center gap-4">
-              <Phone className="w-6 h-6 text-blue-600" />
-              <p className="text-gray-700">+1 (555) 123-4567</p>
+            <div className="flex items-center space-x-4">
+              <Phone className="text-indigo-600 w-6 h-6" />
+              <span className="text-gray-800 text-lg">+254 700554725</span>
             </div>
-            <div className="flex items-center gap-4">
-              <MapPin className="w-6 h-6 text-blue-600" />
-              <p className="text-gray-700">123 Main Street, New York, USA</p>
+            <div className="flex items-center space-x-4">
+              <Mail className="text-indigo-600 w-6 h-6" />
+              <span className="text-gray-800 text-lg">info@dreamapartments.com</span>
             </div>
           </div>
         </div>
 
-        {/* Right Section - Contact Form */}
-        <div className="bg-white shadow-xl rounded-2xl p-8">
+        {/* Right Side - Form */}
+        <div className="bg-white shadow-2xl rounded-2xl p-8 border border-gray-100">
           <form className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Your Name
-              </label>
+              <label className="block text-gray-700 font-semibold mb-2">Full Name</label>
               <input
                 type="text"
-                placeholder="Enter your name"
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="John Doe"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 outline-none"
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Email Address
-              </label>
+              <label className="block text-gray-700 font-semibold mb-2">Email</label>
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="you@example.com"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 outline-none"
               />
             </div>
-
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Message
-              </label>
+              <label className="block text-gray-700 font-semibold mb-2">Message</label>
               <textarea
                 rows="4"
                 placeholder="Write your message..."
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 outline-none"
               ></textarea>
             </div>
-
             <button
               type="submit"
-              className="flex items-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:bg-indigo-700 transition"
             >
-              <Send className="w-5 h-5" />
-              Send Message
+              Send Message <Send size={18} />
             </button>
           </form>
         </div>

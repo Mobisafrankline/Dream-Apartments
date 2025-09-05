@@ -16,6 +16,14 @@ import project_img_6 from './project_img_6.jpg'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import profile_img_3 from './profile_img_3.png'
+import Muranga from './Muranga.jpeg';
+import Nyeri from './Nyeri.jpeg';
+import Kirinyaga from './Kirinyaga.jpeg';
+import Kiambu from './Kiambu.jpeg';
+import singleRoom from './single-room.png';
+import bedsitter from './bedsitter-room.jpg';
+import oneBedroom from './one-bedroom.jpg';
+import twoBedroom from './two-bedroom.jpg';
 
 export const assets = {
     logo,
@@ -31,6 +39,14 @@ export const assets = {
     project_img_4,
     left_arrow,
     right_arrow,
+    Muranga,
+    Kiambu,
+    Kirinyaga,
+    Nyeri,
+    singleRoom,
+    bedsitter,
+    oneBedroom,
+    twoBedroom,
 }
 
 export const projectsData = [

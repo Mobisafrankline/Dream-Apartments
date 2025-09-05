@@ -1,98 +1,50 @@
 import React from "react";
-
-
-const testimonials = [
-  {
-    name: "Calvin Lovi",
-    date: "11 August 2025",
-    text: "The services were good and efficient as well as very kind people who help. As for me Bahati has helped me get a couple of apartments and so far I'm happy with.",
-  },
-  {
-    name: "Eeshwar Jagirdar",
-    date: "11 August 2025",
-    text: "We had a fantastic experience with Sarabi Realty Group, especially our agent Bahati. She was patient, attentive, and really took the time to understand.",
-  },
-  {
-    name: "Patience M",
-    date: "8 August 2025",
-    text: "Great customer experience",
-  },
-];
-
-// Container variant for staggering child animations
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      when: "beforeChildren",
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-// Child variant for each element inside a testimonial
-const childVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+import { testimonialsData } from "../assets/assets";
+import { Star } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 font-sans">
-      {/* Heading animation */}
-      <motion.h2
-        className="text-3xl font-bold text-center mb-12 text-gray-800"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.7 }}
-      >
-        What Our Clients Say...
-      </motion.h2>
+    <div
+      className="container mx-auto py-10 lg:px-10 w-full"
+      id="Testimonials"
+    >
+      <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
+        Customer{" "}
+        <span className="decoration-1 font-light">Reviews</span>
+      </h1>
 
-      {/* Testimonials list */}
-      <div className="space-y-10">
-        {testimonials.map((t, index) => (
-          <motion.div
+      <p className="text-center text-gray-500 mb-12 max-w-md mx-auto">
+        Real stories from those who found a home with us.
+      </p>
+
+      {/* Scrollable Testimonials */}
+      <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 px-4">
+        {testimonialsData.map((testimonial, index) => (
+          <div
             key={index}
-            className="p-5 rounded-2xl shadow-md bg-white"
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            className="min-w-[280px] sm:min-w-[320px] lg:min-w-[350px] p-6 bg-white shadow-md rounded-2xl flex flex-col items-center text-center hover:shadow-lg transition snap-start"
           >
-            <motion.div
-              className="flex justify-between items-start mb-2"
-              variants={childVariants}
-            >
-              <h3 className="text-lg font-bold text-gray-900">{t.name}</h3>
-              <span className="text-gray-500 text-sm">{t.date}</span>
-            </motion.div>
-
-            <motion.div
-              className="w-full h-px bg-gray-300 my-3"
-              variants={childVariants}
+            <img
+              src={testimonial.image}
+              alt={testimonial.alt}
+              className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-gray-200"
             />
 
-            <motion.p className="text-gray-700 mb-2" variants={childVariants}>
-              {t.text}
-            </motion.p>
+            {/* Rating Stars */}
+            <div className="flex justify-center mb-3">
+              {Array.from({ length: testimonial.rating }).map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-5 h-5 text-yellow-400 fill-yellow-400"
+                />
+              ))}
+            </div>
 
-            {/* Only first two testimonials have Read more */}
-            {index !== 2 && (
-              <motion.button
-                variants={childVariants}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-              >
-                Read more
-              </motion.button>
-            )}
-          </motion.div>
+            <p className="text-gray-600 italic mb-4">"{testimonial.text}"</p>
+
+            <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+            <span className="text-sm text-gray-500">{testimonial.title}</span>
+          </div>
         ))}
       </div>
     </div>

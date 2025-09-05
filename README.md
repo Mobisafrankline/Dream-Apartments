@@ -1,12 +1,32 @@
-# React + Vite
+# 🏡 Dream Apartments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern real estate web application built with **React + Tailwind CSS**.  
+Dream Apartments provides affordable and modern living spaces, showcasing houses such as single rooms, bedsitters, one-bedroom, and two-bedroom apartments.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🏠 **Property Listings** – Browse houses (single room, bedsitters, 1 & 2 bedrooms).  
+- ⭐ **Customer Testimonials** – Real reviews from happy tenants.  
+- 🔎 **Search Functionality** – Quickly find your dream home.  
+- 📂 **Dropdown Navigation** – Easy access to house categories.  
+- 🔑 **Authentication Ready** – Login & Sign Up sections for homeowners and clients.  
+- 📱 **Responsive Design** – Works on desktop, tablet, and mobile.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [React](https://reactjs.org/), [Vite](https://vitejs.dev/)  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **Icons**: [Lucide React](https://lucide.dev/)  
+
+---
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mobisafrankline/Dream-Apartments.git
+   cd Dream-Apartments

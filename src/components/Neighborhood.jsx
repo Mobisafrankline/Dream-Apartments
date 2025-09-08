@@ -4,6 +4,8 @@ import MurangaImg from "../assets/Muranga.jpeg";
 import NyeriImg from "../assets/Nyeri.jpeg";
 import KirinyagaImg from "../assets/Kirinyaga.jpeg";
 import KiambuImg from "../assets/Kiambu.jpeg";
+import EmbuImg from "../assets/Embu.jpeg";
+import TharakaNithiImg from "../assets/Tharakanithi.jpeg";
 
 const Neighborhood = () => {
   const neighborhoods = [
@@ -11,6 +13,8 @@ const Neighborhood = () => {
     { name: "Nyeri", image: NyeriImg, link: "/neighborhoods/nyeri" },
     { name: "Kirinyaga", image: KirinyagaImg, link: "/neighborhoods/kirinyaga" },
     { name: "Kiambu", image: KiambuImg, link: "/neighborhoods/kiambu" },
+    { name: "Embu", image: EmbuImg, link: "/neighborhoods/embu" },
+    { name: "Tharaka-Nithi", image: TharakaNithiImg, link: "/neighborhoods/tharaka-nithi" },
   ];
 
   return (
@@ -28,7 +32,7 @@ const Neighborhood = () => {
         </div>
 
         {/* Neighborhoods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {neighborhoods.map((neighborhood, index) => (
             <div
               key={index}

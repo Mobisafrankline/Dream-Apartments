@@ -17,7 +17,7 @@ return (
                 Find beautiful spaces tailored to your lifestyle. Start your journey to the perfect place today!
             </p>
             <div>
-                <a href="#Projects" className="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                <a href="#Projects" className="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
                     Explore Now
                 </a>
                 <a href="#Contact" className="mt-6 inline-block ml-4 bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition">

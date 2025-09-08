@@ -1,29 +1,44 @@
-import React from 'react'
-import Header from './components/Header'
-import About from './components/About'
-import Projects from './components/Projects'
-import DiverseInvestmentOptions from './components/DiverseInvestmentOptions'
-import Neighborhood from './components/Neighborhood'
-import Navbar from './components/Navbar'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import DiverseInvestmentOptions from "./components/DiverseInvestmentOptions";
+import Neighborhood from "./components/Neighborhood";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
+import About from "./components/About"; // Separate About page
 
 const App = () => {
   return (
-    <div className='w-full overflow-hidden'>
-      <Navbar />
-      <Header/>
-      <About/>
-      <Projects/>
-      <Neighborhood/>
-      <DiverseInvestmentOptions/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
-      
-    </div>
-  )
-}
+    <Router>
+      <div className="w-full overflow-hidden">
+        <Navbar />
+        <Routes>
+          {/* Home Page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Projects />
+                <Neighborhood />
+                <DiverseInvestmentOptions />
+                <Testimonials />
+                <Contact />
+              </>
+            }
+          />
 
-export default App
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

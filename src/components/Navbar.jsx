@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const links = [
-  { href: "#Header", label: "Home" },
-  { href: "#About", label: "About" },
-  { href: "#Projects", label: "Projects" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "#Testimonials", label: "Testimonials" },
   { href: "#Contact", label: "Contact" },
 ];
@@ -51,9 +51,15 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-gray-800">
           {links.map((l) => (
             <li key={l.label}>
-              <a href={l.href} className="hover:text-blue-600">
-                {l.label}
-              </a>
+              {l.href.startsWith("/") ? (
+                <Link to={l.href} className="hover:text-blue-600">
+                  {l.label}
+                </Link>
+              ) : (
+                <a href={l.href} className="hover:text-blue-600">
+                  {l.label}
+                </a>
+              )}
             </li>
           ))}
 
@@ -86,13 +92,13 @@ const Navbar = () => {
         {/* Desktop Search + Buttons */}
         <div className="hidden md:flex items-center space-x-3">
           <SearchBar />
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-full hover:bg-gray-300"
           >
             Login
-          </a>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
+          </Link>
+          <button className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
             Sign Up
           </button>
         </div>
@@ -109,16 +115,27 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {open && (
         <div className="md:hidden bg-white rounded-lg mt-2 mx-4 p-4 space-y-4 text-gray-800 shadow-lg">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="block hover:text-blue-600"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.href.startsWith("/") ? (
+              <Link
+                key={l.label}
+                to={l.href}
+                className="block hover:text-blue-600"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                key={l.label}
+                href={l.href}
+                className="block hover:text-blue-600"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </a>
+            )
+          )}
 
           {/* Mobile House Dropdown */}
           <div>
@@ -139,12 +156,12 @@ const Navbar = () => {
           </div>
 
           <SearchBar mobile />
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="block w-full text-center bg-gray-200 text-gray-800 px-6 py-2 rounded-full hover:bg-gray-300"
           >
             Login
-          </a>
+          </Link>
           <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
             Sign Up
           </button>

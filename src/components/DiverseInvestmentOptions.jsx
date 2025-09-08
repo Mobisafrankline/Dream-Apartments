@@ -16,15 +16,17 @@ const DiverseInvestmentOptions = () => {
         {/* Header Section */}
         <div className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-            Diverse Investment Options in Mount Kenya Region
+            Housing Opportunities in Mount Kenya Region
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
-            Do you wish to invest in the Mount Kenya region? Investing in this
-            thriving real estate market offers diverse investment options,
-            providing investors with a robust portfolio that can mitigate risks
-            and enhance returns. The region encompasses a wide range of
-            properties, including residential developments, commercial spaces,
-            and agricultural ventures.
+            Are you looking to invest in the Mount Kenya region? This vibrant
+            market presents excellent opportunities in{" "}
+            <span className="font-semibold text-green-700">
+              student and family rentals
+            </span>
+            , driven by the growing demand for safe, modern, and affordable
+            apartments. We focus on helping people find quality housing while
+            supporting landlords with professional property management.
           </p>
         </div>
 
@@ -33,14 +35,14 @@ const DiverseInvestmentOptions = () => {
           {/* Investment Highlights */}
           <div className="bg-white rounded-xl shadow-md p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-              Investment Highlights
+              Housing Highlights
             </h2>
             <ul className="space-y-4">
               {[
-                "Residential properties with scenic mountain views",
-                "Commercial spaces in growing towns",
-                "Agricultural land with high fertility",
-                "Properties in Nyeri, Murang'a, Embu, Meru, and Tharaka Nithi",
+                "Affordable student rentals near universities and colleges",
+                "Family-friendly apartments in safe neighborhoods",
+                "Modern one and two-bedroom units with essential amenities",
+                "Apartments in Nyeri, Murang’a, Kirinyaga, Embu, and Meru",
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start">
                   <div className="bg-green-100 p-2 rounded-full mr-3 mt-1">
@@ -67,12 +69,12 @@ const DiverseInvestmentOptions = () => {
           {/* Catalogue Download */}
           <div className="bg-white rounded-xl shadow-md p-8 flex flex-col justify-between">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Download Our Latest Catalogue
+              Download Our Rental Catalogue
             </h2>
             <p className="text-gray-600 mb-6">
-              Get exclusive access to our premium property listings with detailed
-              information, pricing, and location insights across the Mount Kenya
-              region.
+              Get exclusive access to our latest listings of student and family
+              apartments with detailed pricing, amenities, and location insights
+              across the Mount Kenya region.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -113,11 +115,11 @@ const DiverseInvestmentOptions = () => {
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 lg:p-12 flex flex-col justify-center">
               <h2 className="text-3xl font-bold mb-6">
-                WATCH OUR PROPERTY TOUR SERIES
+                WATCH OUR APARTMENT TOUR SERIES
               </h2>
               <p className="text-gray-300 mb-8">
-                Take virtual tours of our premium properties across the Mount
-                Kenya region from the comfort of your home.
+                Take virtual tours of our student and family apartments across
+                the Mount Kenya region from the comfort of your home.
               </p>
               <a
                 href="#"
@@ -151,11 +153,12 @@ const DiverseInvestmentOptions = () => {
         {/* Agency Section */}
         <div className="bg-white rounded-2xl shadow-md p-8 md:p-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
-            We Are The Leading Real Estate Agency in Mount Kenya Region
+            We Help Students and Families Find Their Ideal Apartments
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-8">
-            With an extensive catalogue, Mount Kenya Realty Group can match you
-            with a property to call home.
+            With a growing demand for housing, we connect tenants to quality
+            apartments and support landlords with reliable property management
+            services across the Mount Kenya region.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Services */}
@@ -163,10 +166,10 @@ const DiverseInvestmentOptions = () => {
               <h3 className="text-xl font-semibold mb-4">Our Services</h3>
               <ul className="space-y-3">
                 {[
-                  "Residential homes with mountain views",
-                  "Agricultural land investments",
-                  "Commercial properties in growing towns",
-                  "Vacation homes and rental properties",
+                  "Affordable student rentals near institutions",
+                  "Spacious family apartments with modern amenities",
+                  "Property management for landlords",
+                  "Real-time rental data and insights",
                 ].map((service, idx) => (
                   <li key={idx} className="flex items-center">
                     <svg
@@ -195,10 +198,9 @@ const DiverseInvestmentOptions = () => {
                 {[
                   "Nyeri",
                   "Murang'a",
+                  "Kirinyaga",
                   "Embu",
                   "Meru",
-                  "Tharaka Nithi",
-                  "Kirinyaga",
                   "Nanyuki",
                   "Karatina",
                 ].map((area) => (
@@ -214,7 +216,7 @@ const DiverseInvestmentOptions = () => {
           </div>
           <div className="mt-8 text-center">
             <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition">
-              Explore Mount Kenya Properties
+              Explore Apartments in Mount Kenya
             </button>
           </div>
         </div>

@@ -60,14 +60,14 @@ const Projects = () => {
 
         {/* Navigation Arrows */}
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors -left-4"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors -left-4"
           onClick={() => scroll('left')}
           aria-label="Scroll left"
         >
           &lt;
         </button>
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors -right-4"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center shadow-md hover:bg-blue-700 transition-colors -right-4"
           onClick={() => scroll('right')}
           aria-label="Scroll right"
         >
@@ -95,7 +95,7 @@ const Projects = () => {
               <div className="p-4 text-center">
                 <button
                   onClick={() => window.location.href = house.link}
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                 >
                   View {house.title} Photos
                 </button>
